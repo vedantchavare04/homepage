@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tourmate - Solo trips, shared adventures</title>
+<meta name="description" content="Plan a trip with AI, find a squad to travel with, or join a group that is already coming together." />
+<meta name="theme-color" content="#c4e9f7" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6b3d' stroke='%2312213a' stroke-width='4'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='38' fill='%2312213a'%3ET%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<header class="nav" id="nav">
+  <div class="navin">
+    <a class="brand" href="index.html" aria-label="Tourmate home"><i>T</i>Tourmate</a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="sr">Menu</span>
+      <svg class="m" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      <svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <nav id="menu" aria-label="Main">
+      <a href="how-it-works.html">How it works</a>
+      <a href="https://tourmate.vedant-chavare.xyz">Tourmate.ai</a>
+      <a href="https://solo2squad-phi.vercel.app/">Solo2Squad</a>
+      <a href="https://tripsphere-three.vercel.app/">Group Finder</a>
+      <a href="https://feedback-sigma-blush.vercel.app">Feedback</a>
+      <a class="pill" href="https://solo2squad-phi.vercel.app/">Plan a trip</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction" data-clouds>
+  <svg class="sun" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="24"/><path d="M50 6v12M50 82v12M6 50h12M82 50h12M19 19l8 8M73 73l8 8M19 81l8-8M73 27l8-8"/></svg>
+  <div class="in">
+    <div class="copy">
+      <h1>Solo trips end here. Shared ones start.</h1>
+      <p class="sub">Three tools, one goal: get you out the door and traveling with people worth traveling with.</p>
+      <div class="cta-row">
+        <a class="btn arr" href="https://solo2squad-phi.vercel.app/">Plan a trip</a>
+        <a class="btn ghost" href="how-it-works.html">See how it works</a>
+      </div>
+      <p class="newhere">New here? Start with <span class="hl" style="--d:.5s"><a href="how-it-works.html">how it works</a></span>, or go straight to <span class="hl" style="--d:.7s"><a href="https://solo2squad-phi.vercel.app/">Solo2Squad</a></span>.</p>
+    </div>
+    <div class="shot">
+      <div class="photo" role="img" aria-label="Snow-capped mountains above a green valley"></div>
+      <svg class="stamp" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="57" fill="#ff6b3d" stroke="#12213a" stroke-width="3"/><path id="sp" d="M60 60m-41 0a41 41 0 1 1 82 0a41 41 0 1 1-82 0" fill="none"/><text font-size="13" font-weight="700" fill="#12213a" letter-spacing="1.5" font-family="DM Sans,sans-serif"><textPath href="#sp">Happy trails · Safe travels · Happy trails ·</textPath></text><path d="M60 44l4.5 11.5L76 60l-11.5 4.5L60 76l-4.5-11.5L44 60l11.5-4.5z" fill="#12213a"/></svg>
+      <aside class="route" aria-label="Your trip, in order">
+        <h2>Your trip, in order</h2>
+        <p>Start anywhere. Each tool picks up where the last one ends.</p>
+        <a class="stop" style="--a:var(--teal)" href="https://tourmate.vedant-chavare.xyz"><b>Imagine it</b><span>Tourmate.ai builds your itinerary</span></a>
+        <a class="stop" style="--a:var(--coral)" href="https://solo2squad-phi.vercel.app/"><b>Plan it, find your people</b><span>Solo2Squad sets up the trip and the squad</span></a>
+        <a class="stop" style="--a:var(--gold)" href="https://tripsphere-three.vercel.app/"><b>Join a trip</b><span>Group Finder lists open trips</span></a>
+      </aside>
+    </div>
+  </div>
+  <div class="scene" data-lanes="sea rail road" aria-hidden="true"></div>
+</section>
+
+<section class="tools" id="tools" aria-labelledby="th">
+  <h2 id="th">Pick the tool for where you are right now</h2>
+  <p class="lead">Know where you want to go but not how? Get an itinerary. Ready to plan the trip or find people? Start in Solo2Squad. Want something already moving? Join it. No account is needed to look around.</p>
+  <div class="cards">
+<a class="card" style="--a:var(--teal);--ad:var(--teal-d);--t:var(--teal-t)" href="https://tourmate.vedant-chavare.xyz">
+  <div class="ph" role="img" aria-label="Mountain lake at dawn" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=70')"><span class="tag">AI trip planner</span></div>
+  <div class="bd"><h3>Tourmate.ai</h3><p>Feed it a destination and a vibe, get back a real itinerary, not a listicle.</p><span class="go arr">Get an itinerary</span></div>
+</a>
+<a class="card" style="--a:var(--coral);--ad:var(--coral-d);--t:var(--coral-t)" href="https://solo2squad-phi.vercel.app/">
+  <div class="ph" role="img" aria-label="Friends on a road trip" style="background-image:url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=70')"><span class="tag">Plan and match</span></div>
+  <div class="bd"><h3>Solo2Squad</h3><p>Create a trip, or get matched with a small group headed the same direction.</p><span class="go arr">Plan a trip</span></div>
+</a>
+<a class="card" style="--a:var(--gold);--ad:var(--gold-d);--t:var(--gold-t)" href="https://tripsphere-three.vercel.app/">
+  <div class="ph" role="img" aria-label="Old city street at golden hour" style="background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?w=900&q=70')"><span class="tag">Open trips</span></div>
+  <div class="bd"><h3>Group Finder</h3><p>Browse open trips by date, budget and interest. Join one that's already coming together.</p><span class="go arr">Browse groups</span></div>
+</a>
+  </div>
+</section>
+
+<section class="dest" id="destinations" aria-labelledby="dh">
+  <div class="desthead">
+    <div>
+      <h2 id="dh">Where to <span class="hl" style="--d:.1s">next</span>?</h2>
+      <p class="lead">A few places worth building a trip around. Drag, swipe or use the arrows, then take one to Solo2Squad and find people to go with.</p>
+    </div>
+    <div class="dctl" role="group" aria-label="Carousel controls">
+      <span class="dcount" id="dcount" aria-live="off">01 / 08</span>
+      <button class="dbtn" id="dprev" type="button" aria-label="Previous destination"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+      <button class="dbtn" id="dnext" type="button" aria-label="Next destination"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <div class="dtrack" id="dtrack" role="region" aria-roledescription="carousel" aria-label="Holiday destinations" tabindex="0">
+<article class="pc" style="--a:var(--teal);--ad:var(--teal-d);--t:var(--teal-t);--r:-2deg" aria-roledescription="slide" aria-label="1 of 8: Bali">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=70" alt="Temple gate framing a green valley in Bali" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">ID</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">Indonesia</p>
+    <h3>Bali</h3>
+    <p class="pc-tx">Rice terraces, surf mornings and temple sunsets. Easy solo, even better with a squad.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Apr – Oct</dd></div><div><dt>Vibe</dt><dd>Beach · Culture</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Bali">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--coral);--ad:var(--coral-d);--t:var(--coral-t);--r:2deg" aria-roledescription="slide" aria-label="2 of 8: Kyoto">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=70" alt="Pagoda and tiled rooftops in Kyoto" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">JP</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">Japan</p>
+    <h3>Kyoto</h3>
+    <p class="pc-tx">Torii gates, quiet temples and tea houses. Slow mornings and long walks.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Mar – May, Oct – Nov</dd></div><div><dt>Vibe</dt><dd>Culture · Food</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Kyoto">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--gold);--ad:var(--gold-d);--t:var(--gold-t);--r:-2deg" aria-roledescription="slide" aria-label="3 of 8: Santorini">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=70" alt="Whitewashed buildings above the sea in Santorini" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">GR</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">Greece</p>
+    <h3>Santorini</h3>
+    <p class="pc-tx">Whitewashed cliffs and caldera sunsets, a short ferry from the next island.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>May – Oct</dd></div><div><dt>Vibe</dt><dd>Relax · Views</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Santorini">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--teal);--ad:var(--teal-d);--t:var(--teal-t);--r:2deg" aria-roledescription="slide" aria-label="4 of 8: Maldives">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=70" alt="Overwater villas on turquoise water in the Maldives" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">MV</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">Maldives</p>
+    <h3>Maldives</h3>
+    <p class="pc-tx">Overwater villas, reef snorkels and nothing on the schedule.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Nov – Apr</dd></div><div><dt>Vibe</dt><dd>Beach · Relax</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Maldives">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--coral);--ad:var(--coral-d);--t:var(--coral-t);--r:-2deg" aria-roledescription="slide" aria-label="5 of 8: Jaipur">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=70" alt="Hawa Mahal palace facade in Jaipur" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">IN</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">India</p>
+    <h3>Jaipur</h3>
+    <p class="pc-tx">Forts, bazaars and the Pink City at golden hour. A natural first group trip.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Oct – Mar</dd></div><div><dt>Vibe</dt><dd>Culture · Road trip</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Jaipur">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--gold);--ad:var(--gold-d);--t:var(--gold-t);--r:2deg" aria-roledescription="slide" aria-label="6 of 8: Paris">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=70" alt="Eiffel Tower over Paris rooftops" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">FR</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">France</p>
+    <h3>Paris</h3>
+    <p class="pc-tx">Cafes, museums and the river at night. Walk everywhere, over-plan nothing.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Apr – Jun, Sep – Oct</dd></div><div><dt>Vibe</dt><dd>City · Culture</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Paris">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--teal);--ad:var(--teal-d);--t:var(--teal-t);--r:-2deg" aria-roledescription="slide" aria-label="7 of 8: Iceland">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=70" alt="Waterfall and green cliffs in Iceland" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">IS</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">Iceland</p>
+    <h3>Iceland</h3>
+    <p class="pc-tx">Waterfalls, black beaches and a ring road made for a shared car.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Jun – Aug, aurora Sep – Mar</dd></div><div><dt>Vibe</dt><dd>Adventure · Road trip</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Iceland">Plan this trip</a>
+  </div>
+</article>
+<article class="pc" style="--a:var(--coral);--ad:var(--coral-d);--t:var(--coral-t);--r:2deg" aria-roledescription="slide" aria-label="8 of 8: Dubai">
+  <div class="pc-ph"><img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=70" alt="Dubai skyline at dusk" loading="lazy" draggable="false" onerror="this.remove()"/><span class="pc-stamp" aria-hidden="true">AE</span></div>
+  <div class="pc-bd">
+    <p class="pc-loc">UAE</p>
+    <h3>Dubai</h3>
+    <p class="pc-tx">Desert dunes, skyline views and souks, all within a short ride.</p>
+    <dl class="pc-meta"><div><dt>Best time</dt><dd>Nov – Mar</dd></div><div><dt>Vibe</dt><dd>City · Adventure</dd></div></dl>
+    <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html" aria-label="Plan a trip to Dubai">Plan this trip</a>
+  </div>
+</article>
+  </div>
+  <div class="droute" aria-hidden="true"><i class="dflag"></i><span class="dline"></span><i class="dflag end"></i><svg class="dplane" id="dplane" viewBox="0 0 72 30"><path d="M7 13 3 2h8l8 11z" fill="#ff6b3d" stroke="#12213a" stroke-width="2" stroke-linejoin="round"/><path d="M3 16c0-3 5-6 12-6h36c10 0 19 3 19 6s-9 6-19 6H15C8 22 3 19 3 16z" fill="#fff" stroke="#12213a" stroke-width="2" stroke-linejoin="round"/><path d="M30 17 21 29h10l15-12z" fill="#ffc93c" stroke="#12213a" stroke-width="2" stroke-linejoin="round"/><path d="M55 12h7c3 1 6 2 6 4H55z" fill="#7cc7e6"/></svg></div>
+</section>
+
+<section class="how" id="how" aria-labelledby="hh">
+  <h2 id="hh">See <span class="hl" style="--d:.1s">how it works</span> in five steps</h2>
+  <p class="lead">From a loose idea to a trip with a squad. Each step opens the tool that does it.</p>
+  <div class="row5">
+<article class="step" style="--a:var(--teal);--ad:var(--teal-d);--t:var(--teal-t)">
+  <span class="num">01</span>
+  <h3>Pick a destination</h3>
+  <p>Tell Tourmate.ai where you want to go and what the trip should feel like.</p>
+  <a class="go arr" href="https://tourmate.vedant-chavare.xyz">Open Tourmate.ai</a>
+</article>
+<article class="step" style="--a:var(--teal);--ad:var(--teal-d);--t:var(--teal-t)">
+  <span class="num">02</span>
+  <h3>Get a real itinerary</h3>
+  <p>It turns that into a day-by-day plan you can actually follow, not a listicle.</p>
+  <a class="go arr" href="https://solo2squad-phi.vercel.app/">Get an itinerary</a>
+</article>
+<article class="step" style="--a:var(--coral);--ad:var(--coral-d);--t:var(--coral-t)">
+  <span class="num">03</span>
+  <h3>Plan the trip in <span class="hl" style="--d:.15s">Solo2Squad</span></h3>
+  <p>Create your trip with a destination, a date and a group size.</p>
+  <a class="go arr" href="https://solo2squad-phi.vercel.app/create-trip.html">Plan a trip</a>
+</article>
+<article class="step" style="--a:var(--coral);--ad:var(--coral-d);--t:var(--coral-t)">
+  <span class="num">04</span>
+  <h3>Build your squad</h3>
+  <p>People request to join and you accept, with capacity enforced. Your squad gets a private chat, an itinerary and shared expenses.</p>
+  <a class="go arr" href="https://solo2squad-phi.vercel.app/trips.html">Find your squad</a>
+</article>
+<article class="step" style="--a:var(--gold);--ad:var(--gold-d);--t:var(--gold-t)">
+  <span class="num">05</span>
+  <h3>Or join one already moving</h3>
+  <p>Browse open trips in Group Finder by date, budget and interest, and join one that is coming together.</p>
+  <a class="go arr" href="https://tripsphere-three.vercel.app/">Browse groups</a>
+</article>
+  </div>
+  <div class="more"><a class="btn ghost arr" href="how-it-works.html">Read the full walkthrough</a></div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="qh">
+  <div class="faqin">
+    <div class="faqside">
+      <h2 id="qh">Questions, <span class="hl" style="--d:.1s">answered</span>.</h2>
+      <p class="lead">The short version of how Tourmate, Solo2Squad and Group Finder fit together.</p>
+      <aside class="faqnote"><b>Still wondering?</b><span>Tell us what is missing and we will add it.</span><a class="go arr" href="https://feedback-sigma-blush.vercel.app">Ask in the feedback form</a></aside>
+    </div>
+    <div class="faqlist">
+<details class="q" name="faq" style="--a:var(--teal);--t:var(--teal-t)" open>
+  <summary><span class="qn">01</span><span class="qt">What is Tourmate?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>Tourmate is the front door to three connected tools: Tourmate.ai builds an itinerary, Solo2Squad sets up the trip and matches you with a small group, and Group Finder lists open trips you can join. Each one picks up where the last one ends.</p></div>
+</details>
+<details class="q" name="faq" style="--a:var(--coral);--t:var(--coral-t)">
+  <summary><span class="qn">02</span><span class="qt">Do I need an account to look around?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>No. You can browse the tools and see how they work without signing up. You will need a free Solo2Squad account when you want to create a trip or request to join one.</p></div>
+</details>
+<details class="q" name="faq" style="--a:var(--gold);--t:var(--gold-t)">
+  <summary><span class="qn">03</span><span class="qt">Which tool should I start with?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>Know where you want to go but not how? Start with Tourmate.ai. Ready to plan a trip or find people? Go to Solo2Squad. Want something that is already coming together? Open Group Finder and join it.</p></div>
+</details>
+<details class="q" name="faq" style="--a:var(--teal);--t:var(--teal-t)">
+  <summary><span class="qn">04</span><span class="qt">How does joining a squad work?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>You request to join a trip and the host accepts, with group capacity enforced so a trip never overfills. Once you are in, the squad gets a private chat, a shared itinerary and shared expenses.</p></div>
+</details>
+<details class="q" name="faq" style="--a:var(--coral);--t:var(--coral-t)">
+  <summary><span class="qn">05</span><span class="qt">What is the difference between Solo2Squad and Group Finder?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>Solo2Squad is where you create and run your own trip and build the squad around it. Group Finder is for browsing trips that are already open, filtered by date, budget and interest, so you can join one instead of starting from scratch.</p></div>
+</details>
+<details class="q" name="faq" style="--a:var(--gold);--t:var(--gold-t)">
+  <summary><span class="qn">06</span><span class="qt">Is Tourmate only for solo travelers?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>No. Solo travelers are the starting point, but friends can use Solo2Squad to plan together, and anyone can join an open trip. A squad is small by design, so the trip stays friendly.</p></div>
+</details>
+<details class="q" name="faq" style="--a:var(--teal);--t:var(--teal-t)">
+  <summary><span class="qn">07</span><span class="qt">I found a bug or have an idea. Where do I send it?</span><span class="qi" aria-hidden="true"></span></summary>
+  <div class="qa"><p>Use the feedback form. It takes about 30 seconds and goes straight to the people who build these tools, and you can rate a specific tool from the feedback section or the Feedback button on every page.</p></div>
+</details>
+    </div>
+  </div>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Tourmate?", "acceptedAnswer": {"@type": "Answer", "text": "Tourmate is the front door to three connected tools: Tourmate.ai builds an itinerary, Solo2Squad sets up the trip and matches you with a small group, and Group Finder lists open trips you can join. Each one picks up where the last one ends."}}, {"@type": "Question", "name": "Do I need an account to look around?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can browse the tools and see how they work without signing up. You will need a free Solo2Squad account when you want to create a trip or request to join one."}}, {"@type": "Question", "name": "Which tool should I start with?", "acceptedAnswer": {"@type": "Answer", "text": "Know where you want to go but not how? Start with Tourmate.ai. Ready to plan a trip or find people? Go to Solo2Squad. Want something that is already coming together? Open Group Finder and join it."}}, {"@type": "Question", "name": "How does joining a squad work?", "acceptedAnswer": {"@type": "Answer", "text": "You request to join a trip and the host accepts, with group capacity enforced so a trip never overfills. Once you are in, the squad gets a private chat, a shared itinerary and shared expenses."}}, {"@type": "Question", "name": "What is the difference between Solo2Squad and Group Finder?", "acceptedAnswer": {"@type": "Answer", "text": "Solo2Squad is where you create and run your own trip and build the squad around it. Group Finder is for browsing trips that are already open, filtered by date, budget and interest, so you can join one instead of starting from scratch."}}, {"@type": "Question", "name": "Is Tourmate only for solo travelers?", "acceptedAnswer": {"@type": "Answer", "text": "No. Solo travelers are the starting point, but friends can use Solo2Squad to plan together, and anyone can join an open trip. A squad is small by design, so the trip stays friendly."}}, {"@type": "Question", "name": "I found a bug or have an idea. Where do I send it?", "acceptedAnswer": {"@type": "Answer", "text": "Use the feedback form. It takes about 30 seconds and goes straight to the people who build these tools, and you can rate a specific tool from the feedback section or the Feedback button on every page."}}]}</script>
+</section>
+
+<section class="fb" id="feedback" aria-labelledby="fh">
+  <div class="fbin">
+    <div>
+      <h2 id="fh">Used one of them? Share your <span class="hl" style="--d:.1s">feedback</span>.</h2>
+      <p>A 30-second note goes straight to the people who build these tools. Bugs, praise and half-baked ideas are all welcome.</p>
+      <a class="btn arr" href="https://feedback-sigma-blush.vercel.app">Open the feedback form</a>
+      <p class="url">feedback-sigma-blush.vercel.app</p>
+    </div>
+    <ul class="fblist" aria-label="Give feedback on a specific tool">
+      <li><a style="--a:var(--teal)" href="https://feedback-sigma-blush.vercel.app/?project=tourmate"><b>Tourmate.ai</b><span>Rate the planner</span></a></li>
+      <li><a style="--a:var(--coral)" href="https://feedback-sigma-blush.vercel.app/?project=solo2squad"><b>Solo2Squad</b><span>Rate squad matching</span></a></li>
+      <li><a style="--a:var(--gold)" href="https://feedback-sigma-blush.vercel.app/?project=groupfinder"><b>Group Finder</b><span>Rate open trips</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="bh">
+  <h2 id="bh">The trip starts when you pick one.</h2>
+  <p>Plan it, share it, or join one that's leaving soon.</p>
+  <div class="cta-row">
+    <a class="btn" href="https://solo2squad-phi.vercel.app/">Plan a trip</a>
+    <a class="btn ghost" href="https://tripsphere-three.vercel.app/">Browse groups</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="fcols">
+    <div>
+      <div class="brand"><i>T</i>Tourmate</div>
+      <p>Solo trips, shared adventures. Plan with AI, find your squad, join a group.</p>
+    </div>
+    <div>
+      <h4>Tools</h4>
+      <a href="https://tourmate.vedant-chavare.xyz">Tourmate.ai</a>
+      <a href="https://solo2squad-phi.vercel.app/">Solo2Squad</a>
+      <a href="https://tripsphere-three.vercel.app/">Group Finder</a>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="how-it-works.html">How it works</a>
+      <a href="index.html#tools">All tools</a>
+      <a href="https://feedback-sigma-blush.vercel.app">Give feedback</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+  <div class="fbase">&copy; 2026 Tourmate.</div>
+</footer>
+<a class="fab" href="https://feedback-sigma-blush.vercel.app">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" /></svg>
+  Feedback
+</a>
+<script src="script.js"></script>
+</body>
+</html>
